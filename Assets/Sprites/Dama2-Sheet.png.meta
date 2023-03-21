@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 651233aadad161a49b200b673a9a34fa
+guid: 03e63897a81b28c4fbef40a6d47f54e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: peon_negro-Sheet_0
+      name: Dama2-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c686d33a831ca184b92d11bcf24b7be8
-      internalID: -1801465972
+      spriteID: 4849da65739c41540b8be985a9f079bf
+      internalID: -1605665359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_1
+      name: Dama2-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2eb5fe1e505a504580aa3b0766549fb
-      internalID: -462952722
+      spriteID: 49b8299fcd82fa340b0befbdb5351bc2
+      internalID: 1439349107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_2
+      name: Dama2-Sheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac253022581193142bf864eee0186b9c
-      internalID: 660274587
+      spriteID: 89327a83160d48142a0ca07fcb4c75c4
+      internalID: 1886223047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_3
+      name: Dama2-Sheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614233272b33c98438b9fd105fdc76c9
-      internalID: -492307386
+      spriteID: f6a3958563088cd4d87bf3c68885c7f0
+      internalID: 607441124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_4
+      name: Dama2-Sheet_4
       rect:
         serializedVersion: 2
         x: 128
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f7608a3d3bc2e43824f01e236d6c40
-      internalID: 1960783701
+      spriteID: 1bb9b314c1c6fb94aa9d1868afe11fd1
+      internalID: 334662753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_5
+      name: Dama2-Sheet_5
       rect:
         serializedVersion: 2
         x: 160
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63aef6f85799b44aa01b817826b1569
-      internalID: 470338745
+      spriteID: 0b84bf82df0d0304ab78197bf26024cd
+      internalID: 813139160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_6
+      name: Dama2-Sheet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -244,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4712f513918dca34aae703e6312af660
-      internalID: -1768006460
+      spriteID: 7857a5b12996694408996b789fd7c4bb
+      internalID: 1429485768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_7
+      name: Dama2-Sheet_7
       rect:
         serializedVersion: 2
         x: 32
@@ -265,14 +265,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfb37ed27a4fc4c4fb4f2e5cc16234ed
-      internalID: -1918747636
+      spriteID: d69b22bbd4d2ce34a865413d90259613
+      internalID: -1292311057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_8
+      name: Dama2-Sheet_8
       rect:
         serializedVersion: 2
         x: 64
@@ -286,14 +286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ba2000cd2e7ab141adbfc8bfaf67d9f
-      internalID: 82772166
+      spriteID: d8893e7af33f9214d8fb27807274a219
+      internalID: -2145142704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_9
+      name: Dama2-Sheet_9
       rect:
         serializedVersion: 2
         x: 96
@@ -307,14 +307,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22883097b5831084ca48f4c299852e18
-      internalID: -1593782188
+      spriteID: a0df1c4be75b9e849bc571e373581ae6
+      internalID: 1414576454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_10
+      name: Dama2-Sheet_10
       rect:
         serializedVersion: 2
         x: 128
@@ -328,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3252bd667cc42084cb8606c96c876115
-      internalID: -596312374
+      spriteID: a86db5d866b79ee46b6b5c24254c21bb
+      internalID: 1289209704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_11
+      name: Dama2-Sheet_11
       rect:
         serializedVersion: 2
         x: 160
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8a626920311a504c82aa4fec5db957d
-      internalID: -57637143
+      spriteID: ec2edb29b68cc0643a00aef51b6d2aa7
+      internalID: -538266077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_12
+      name: Dama2-Sheet_12
       rect:
         serializedVersion: 2
         x: 192
@@ -370,14 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b14d185ca519284faf3fbabde400872
-      internalID: 180630079
+      spriteID: e4b0146f2b3e72342bbbb54a9bf6e49d
+      internalID: 1507667639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: peon_negro-Sheet_13
+      name: Dama2-Sheet_13
       rect:
         serializedVersion: 2
         x: 224
@@ -391,8 +391,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c29c41df5baf0654fb379c5ddc41e3c2
-      internalID: 1739109775
+      spriteID: aab4d7f39b76aa645b9cdd4775bb6dd4
+      internalID: -1311048651
       vertices: []
       indices: 
       edges: []
@@ -408,20 +408,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      peon_negro-Sheet_0: -1801465972
-      peon_negro-Sheet_2: 660274587
-      peon_negro-Sheet_10: -596312374
-      peon_negro-Sheet_13: 1739109775
-      peon_negro-Sheet_3: -492307386
-      peon_negro-Sheet_5: 470338745
-      peon_negro-Sheet_12: 180630079
-      peon_negro-Sheet_11: -57637143
-      peon_negro-Sheet_4: 1960783701
-      peon_negro-Sheet_8: 82772166
-      peon_negro-Sheet_7: -1918747636
-      peon_negro-Sheet_1: -462952722
-      peon_negro-Sheet_6: -1768006460
-      peon_negro-Sheet_9: -1593782188
+      Dama2-Sheet_3: 607441124
+      Dama2-Sheet_12: 1507667639
+      Dama2-Sheet_6: 1429485768
+      Dama2-Sheet_4: 334662753
+      Dama2-Sheet_5: 813139160
+      Dama2-Sheet_9: 1414576454
+      Dama2-Sheet_11: -538266077
+      Dama2-Sheet_7: -1292311057
+      Dama2-Sheet_10: 1289209704
+      Dama2-Sheet_1: 1439349107
+      Dama2-Sheet_13: -1311048651
+      Dama2-Sheet_0: -1605665359
+      Dama2-Sheet_8: -2145142704
+      Dama2-Sheet_2: 1886223047
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
