@@ -9,16 +9,19 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float pointsAmount;
     [SerializeField] private Score pointsNumber;
 
+    private bool isDead;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //que el enemigo compureve si el player esta al alcance y sino que baje una casilla hacia abajo
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
