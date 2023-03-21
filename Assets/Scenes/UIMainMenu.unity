@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/UIMainMenu.unity
 --- !u!1 &408863216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,3 +1648,5 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066830196}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> d2f9ccc7ece3626ce9db365764906300b22bf9e5:Assets/Scenes/MainMenu.unity
