@@ -4,15 +4,41 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(CellMovement))]
+[RequireComponent(typeof(PlayerHealth))]
 public class Player : MonoBehaviour
 {
+    // Gracias a "static" la variable se crea en el scope global y
+    // así podremos acceder al player desde los scripts de enemigos.
+    public static Player instance;
 
-    private CellMovement cellMovement;
+    public GameObject possibleMovementsPrevisualization;
+
+    public CellMovement cellMovement;
+    public PlayerHealth playerHealth;
+
+    private Vector2 spawnPosition;
+
+
+    public void OnAttacked()
+    {
+        transform.position = spawnPosition;
+        playerHealth.RecieveDamage();
+    }
+
+    private void Awake()
+    {
+        instance = this;
+        cellMovement = GetComponent<CellMovement>();
+        playerHealth = GetComponent<PlayerHealth>();
+
+    }
 
     // Start is called before the first frame update
     void Start()
-    {
-        cellMovement = GetComponent<CellMovement>();
+    {   
+        possibleMovementsPrevisualization.SetActive(true);
+        TurnManager.instance.allEnemyMovementFinishedEvent.AddListener(OnEnemyMovementCompleted);
+
         //en enemy
         if (this.ValidMovement(transform.position))
         {
@@ -22,6 +48,19 @@ public class Player : MonoBehaviour
         {
             //no pinto nada
         }
+
+        spawnPosition = transform.position;
+
+    }
+
+    void OnEnemyMovementCompleted()
+    {
+        possibleMovementsPrevisualization.SetActive(true);
+    }
+
+    void OnMovementCompleted()
+    {
+
     }
 
     // Update is called once per frame
@@ -33,12 +72,16 @@ public class Player : MonoBehaviour
 
             if(ValidMovement(mousePosition))
             {
-                cellMovement.MoveTo(CellMovement.GetCurrentCell(mousePosition));
+                StartMovement(CellMovement.GetCurrentCell(mousePosition));
             }
-
-           
         }
         
+    }
+
+    private void StartMovement(Vector2 destination)
+    {
+        possibleMovementsPrevisualization.SetActive(false);
+        cellMovement.MoveTo(destination);
     }
 
     public bool ValidMovement(Vector2 desiredMovement)
@@ -55,13 +98,55 @@ public class Player : MonoBehaviour
         {
             return false;
         }
-        if (desiredMovement.x < 2.5 || desiredMovement.x > 9.5 || desiredMovement.y > -3.5 || desiredMovement.y < -12.5)
+        if (desiredMovement.x < 2.5 || desiredMovement.x > 9.5 || desiredMovement.y > 3f || desiredMovement.y < -12.5)
         {
             return false;
         }
-        if (personaje.x == destino.x || personaje.y == destino.y || difX == difY)
+        
+        if(DiagonalCheckValidMovement(destino) || HorVerCheckValidMovement(destino)){
             return true;
+        }
 
         return false;
     }
+
+    private bool HorVerCheckValidMovement(Vector2 targetPos)
+    {
+        Vector2 playerPosition = Player.instance.transform.position;
+        Vector2 vectorToPlayer = playerPosition - targetPos;
+
+        float dotVertical = Mathf.Abs(Vector2.Dot(Vector2.up, vectorToPlayer.normalized));
+        float dotHorizontal = Mathf.Abs(Vector2.Dot(Vector2.right, vectorToPlayer.normalized));
+
+        const float threshold = 0.9999f;
+        if (dotVertical >= threshold || dotHorizontal >= threshold)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool DiagonalCheckValidMovement(Vector2 targetPos)
+
+    {
+        Vector2 playerPosition = Player.instance.transform.position;
+        Vector2 vectorToPlayer = playerPosition - targetPos;
+
+        Vector2 diag1 = Vector2.one.normalized;
+        Vector2 diag2 = new Vector2(1f, -1f).normalized;
+
+        float dot1 = Mathf.Abs(Vector2.Dot(diag1, vectorToPlayer.normalized));
+        float dot2 = Mathf.Abs(Vector2.Dot(diag2, vectorToPlayer.normalized));
+
+        if (dot1 >= 0.999f || dot2 >= 0.999f)
+        {
+
+            return true;
+        }
+
+        return false;
+    }
+
+
 }

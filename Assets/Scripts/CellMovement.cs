@@ -1,19 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CellMovement : MonoBehaviour
 {
     //constantes necesarias para las mates, no tocar x favor.
-    const float METERS_PER_CELL = 1f;
-    const float HALF_CELL_SIZE = METERS_PER_CELL * 0.5f;
-    const float MOVEMENT_DURATION = 0.7f;
-    const float MOVING_SCALE = 0.2f;
+    public const float METERS_PER_CELL = 1f;
+    public const float HALF_CELL_SIZE = METERS_PER_CELL * 0.5f;
+    public const float MOVEMENT_DURATION = 0.7f;
+    public const float MOVING_SCALE = 0.2f;
+
+    
 
     public AnimationCurve curvaAnimacionMovimiento;
     public AnimationCurve efecto3DAnimacionMovimiento;
 
     bool isMoving = false;
+
+    public UnityEvent movementCompletedEvent;
+
+    private void Awake()
+    {
+        movementCompletedEvent = new UnityEvent();
+        transform.position = GetCurrentCell();
+
+    }
 
     Vector2 GetCurrentCell()
     {
@@ -41,7 +53,6 @@ public class CellMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = GetCurrentCell();
     }
 
     public void MoveTo(Vector2 cellCoord)
@@ -56,7 +67,7 @@ public class CellMovement : MonoBehaviour
      */
     IEnumerator MovementRoutine(Vector2 origin, Vector2 destiny)
     {
-        isMoving= true;
+        isMoving = true;
         // Conforme la ficha se mueve su escala se hace mas grande
         // para simular que "sube" como si fuera 3D.
         // para poder hacer esto nos guardamos los valores originales de la escala.
@@ -98,10 +109,11 @@ public class CellMovement : MonoBehaviour
         }
 
         // Cuando termina la animacion nos aseguramos de que los valores son correctos.
-        transform.position = destiny;
+        transform.position = new Vector3(destiny.x, destiny.y, -0.1f);
         transform.localScale = orignalScale;
         isMoving= false;
 
+        movementCompletedEvent.Invoke();
     }
 
     // Update is called once per frame
