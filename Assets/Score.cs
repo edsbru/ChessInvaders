@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        points += Time.deltaTime;
+        points = Time.deltaTime;  
         textMesh.text = points.ToString("0");
     }
 
