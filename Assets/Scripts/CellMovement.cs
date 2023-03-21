@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CellMovement : MonoBehaviour
 {
-
+    //constantes necesarias para las mates, no tocar x favor.
     const float METERS_PER_CELL = 1f;
     const float HALF_CELL_SIZE = METERS_PER_CELL * 0.5f;
     const float MOVEMENT_DURATION = 0.7f;
@@ -12,6 +12,8 @@ public class CellMovement : MonoBehaviour
 
     public AnimationCurve curvaAnimacionMovimiento;
     public AnimationCurve efecto3DAnimacionMovimiento;
+
+    bool isMoving = false;
 
     Vector2 GetCurrentCell()
     {
@@ -44,14 +46,17 @@ public class CellMovement : MonoBehaviour
 
     public void MoveTo(Vector2 cellCoord)
     {
-        StartCoroutine(MovementRoutine(transform.position, cellCoord));
+        if (isMoving == false)
+        {
+            StartCoroutine(MovementRoutine(transform.position, cellCoord));
+        }
     }
-
     /**
      * Rutina que mueve la ficha de un punto a otro.
      */
     IEnumerator MovementRoutine(Vector2 origin, Vector2 destiny)
     {
+        isMoving= true;
         // Conforme la ficha se mueve su escala se hace mas grande
         // para simular que "sube" como si fuera 3D.
         // para poder hacer esto nos guardamos los valores originales de la escala.
@@ -95,6 +100,7 @@ public class CellMovement : MonoBehaviour
         // Cuando termina la animacion nos aseguramos de que los valores son correctos.
         transform.position = destiny;
         transform.localScale = orignalScale;
+        isMoving= false;
 
     }
 
