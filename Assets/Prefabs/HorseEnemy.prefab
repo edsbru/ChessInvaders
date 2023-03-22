@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab947b0644df4524ebfe704da85add44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 3
   moving: 0
   onStartMovingEvent:
     m_PersistentCalls:

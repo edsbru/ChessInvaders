@@ -21,6 +21,7 @@ public abstract class AIBase : MonoBehaviour
     }
 
     protected abstract bool AttackCondition();
+    
 
     protected Vector2 GenerateDestination()
     {
@@ -33,6 +34,8 @@ public abstract class AIBase : MonoBehaviour
             Attack();
             return CellMovement.GetCurrentCell(playerPosition);
         }
+
+        
 
 
         return CellMovement.GetCurrentCell(currentPosition + Vector2.down * CellMovement.METERS_PER_CELL);
@@ -66,6 +69,5 @@ public abstract class AIBase : MonoBehaviour
     {
         attacking = true;
     }
-
 
 }
