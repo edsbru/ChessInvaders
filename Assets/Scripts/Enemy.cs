@@ -14,8 +14,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //que el enemigo compureve si el player esta al alcance y sino que baje una casilla hacia abajo
-
+        
     }
 
     // Update is called once per frame
@@ -32,5 +31,10 @@ public class Enemy : MonoBehaviour
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+    }
+
+    private void CheckPosition()
+    {
+        if ()
     }
 }
