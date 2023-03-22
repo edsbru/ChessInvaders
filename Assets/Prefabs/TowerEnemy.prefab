@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 6177411348394514761}
   - component: {fileID: 6177411348394514762}
   - component: {fileID: 6177411348394514758}
+  - component: {fileID: -2627229972354670684}
   m_Layer: 0
   m_Name: TowerEnemy
   m_TagString: Untagged
@@ -161,7 +162,7 @@ SpriteRenderer:
   m_SortingLayerID: -1006465025
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4d56d7893ce50c4884c161eb311f3e7, type: 3}
+  m_Sprite: {fileID: 1128771877, guid: cdfea55a24d70d04aa797b68ce558d3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab947b0644df4524ebfe704da85add44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
   moving: 0
   onStartMovingEvent:
     m_PersistentCalls:
@@ -285,3 +287,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyRedSignal: {fileID: 2902116366450455226}
+--- !u!95 &-2627229972354670684
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177411348394514764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db291288dd7852745bba249181482da6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

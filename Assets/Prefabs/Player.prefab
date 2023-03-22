@@ -4303,6 +4303,7 @@ GameObject:
   - component: {fileID: 2634029017064313485}
   - component: {fileID: 2634029017064313484}
   - component: {fileID: 2634029017064313487}
+  - component: {fileID: 223838581404268376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4367,7 +4368,7 @@ SpriteRenderer:
   m_SortingLayerID: -1006465025
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4d56d7893ce50c4884c161eb311f3e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5653fd8f3341a7c49ab945ae1a68a4b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4391,6 +4392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleMovementsPrevisualization: {fileID: 2634029016066168902}
+  cellMovement: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!114 &2634029017064313487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4470,6 +4473,22 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   movementCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &223838581404268376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2634029017064313483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25ebdcdd679bd54ebc1277a7ac68717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  playerDiesEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2634029017065102356
