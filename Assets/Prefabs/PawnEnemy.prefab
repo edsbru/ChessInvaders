@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4102799711895767236}
   - component: {fileID: 4102799711895767237}
   - component: {fileID: -306935991215246008}
+  - component: {fileID: -8883023425388997795}
   m_Layer: 0
   m_Name: PawnEnemy
   m_TagString: Untagged
@@ -302,3 +303,23 @@ MonoBehaviour:
   effect: {fileID: 0}
   pointsAmount: 0
   pointsNumber: {fileID: 0}
+--- !u!95 &-8883023425388997795
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102799711895767096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec988de247c5f994ea8181a99154e3c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
 
     public int gameStartScene;
+    public int gameEndScene;
+    public int credits;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +26,17 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-        
+        Application.Quit(gameEndScene);
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(credits);
     }
 
     void GameOver()
     {
         Debug.Log("GAME OVER ");
+        SceneManager.LoadScene(gameStartScene);
     }
 }

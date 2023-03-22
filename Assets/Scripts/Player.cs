@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
             if(ValidMovement(mousePosition))
             {
                 StartMovement(CellMovement.GetCurrentCell(mousePosition));
+                
             }
         }
         
