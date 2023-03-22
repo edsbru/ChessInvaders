@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player.instance.playerHealth.playerDiesEvent.AddListener(GameOver);
+        if(Player.instance != null)
+        {
+            Player.instance.playerHealth.playerDiesEvent.AddListener(GameOver);
+        }
     }
 
     public void StartGame()

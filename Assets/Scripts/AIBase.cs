@@ -43,9 +43,16 @@ public abstract class AIBase : MonoBehaviour
 
     void OnMove()
     {
-        emptyRedSignal.SetActive(false);
-        Vector2 destination = GenerateDestination();
-        cellMovement.MoveTo(destination);
+        if (Vector2.Distance(Player.instance.transform.position, transform.position) < 0.1f)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            emptyRedSignal.SetActive(false);
+            Vector2 destination = GenerateDestination();
+            cellMovement.MoveTo(destination);
+        }
     }
 
     void OnMoveEnds() {

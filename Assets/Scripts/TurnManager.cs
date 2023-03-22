@@ -52,7 +52,7 @@ public class TurnManager : MonoBehaviour
     void SpawnEnemies() {
 
         int minEnemies = 0;
-        int maxEnemies = 4;
+        int maxEnemies = 2;
         if(enemies.Count == 0)
         {
             minEnemies = 1;

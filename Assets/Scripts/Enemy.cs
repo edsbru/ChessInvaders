@@ -35,6 +35,6 @@ public class Enemy : MonoBehaviour
 
     private void CheckPosition()
     {
-        if ()
+     
     }
 }

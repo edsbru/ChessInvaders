@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 4102799711895767235}
   - component: {fileID: 4102799711895767236}
   - component: {fileID: 4102799711895767237}
+  - component: {fileID: -306935991215246008}
   m_Layer: 0
   m_Name: PawnEnemy
   m_TagString: Untagged
@@ -286,3 +287,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyRedSignal: {fileID: 3673059040642970332}
+--- !u!114 &-306935991215246008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102799711895767096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754f6276a78930048b3fcf9b8aafbd64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}
+  pointsAmount: 0
+  pointsNumber: {fileID: 0}
